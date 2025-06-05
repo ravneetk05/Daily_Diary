@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Add User</title>
+  <style>
+    body { font-family: Arial; background: #f2f2f2; padding: 70px; }
+    form { background: #fff; padding: 20px; max-width: 450px; margin: auto; border-radius: 8px; }
+    input { width: 90%; padding: 10px; margin: 20px ; margin-left: 10px; }
+    button { padding: 14px 20px; background: #007bff; color: white; border: none; border-radius: 5px; }
+    a { text-decoration: none; color: #007bff; display: block; text-align: center; margin-top: 16px; }
+  </style>
+</head>
+<body>
+  <form action="/submit" method="POST">
+    <h1>Dear Diary 📝</h1>
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="text" name="diary" placeholder="Write your thoughts..." required />
+    <button type="submit">Save</button>
+    <a href="/users">View Previous entries</a>
+  </form>
+</body>
+</html>

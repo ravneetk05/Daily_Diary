@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Edit entry</title>
+  <style>
+    body { font-family: Arial; background: #f9f9f9; padding: 30px; }
+    form { background: #fff; padding: 20px; max-width: 400px; margin: auto; border-radius: 8px; }
+    input { width: 100%; padding: 10px; margin: 10px 0; }
+    button { padding: 10px 20px; background: #28a745; color: white; border: none; border-radius: 5px; }
+    a { text-align: center; display: block; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <form action="/update/<%= user._id %>" method="POST">
+    <h2>Edit the Entry....</h2>
+    <input type="text" name="name" value="<%= user.name %>" required />
+    <input type="text" name="diary" value="<%= user.diary %>" required />
+    <button type="submit">Update</button>
+    <a href="/users">Back</a>
+  </form>
+</body>
+</html>
