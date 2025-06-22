@@ -11,7 +11,7 @@ app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
 // MongoDB connection
-mongoose.connect(process.env.MONGO_URI, {
+mongoose.connect('mongodb://127.0.0.1:27017', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => console.log('✅ Connected to MongoDB'))
@@ -73,8 +73,6 @@ app.post('/delete/:id', async (req, res) => {
 });
 
 // to start the server 
-const PORT = process.env.PORT || 4000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+app.listen(4000, () => {
+  console.log(' Server running at http://localhost:4000');
 });
-
